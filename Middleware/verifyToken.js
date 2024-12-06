@@ -1,4 +1,4 @@
-import jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken"; // CommonJS module requires default-like import
 
 export const verifyToken = (req, res, next) => {
   const token = req.cookies.token;
