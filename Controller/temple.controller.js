@@ -1,4 +1,4 @@
-import prisma from "../lib/prisma.js";
+import prisma from "../Lib/prisma.js";
 
 export const getTempleDetails = async (req, res) => {
   const templeId = req.params.templeId;

@@ -1,4 +1,4 @@
-import prisma from "../lib/prisma.js";
+import prisma from "../Lib/prisma.js";
 
 export const getReviews = async (req, res) => {
   const postId = req.params.postId;

@@ -106,7 +106,10 @@ model Message {
 model Temple {
    id   String   @id @default(auto()) @map("_id") @db.ObjectId
   title  String
-  imgUrl  String
+   urls        String[] // Array of strings for multiple URLs
+  longitude   Float    // Longitude as a separate field
+  latitude    Float    // Latitude as a separate field
+  activities  String[] // Array of strings for the activities
   dec  String?
 }
 model Beaches {

@@ -1,4 +1,4 @@
-import prisma from "../lib/prisma.js";
+import prisma from "../Lib/prisma.js";
 
 // Fetch details for a specific beach based on the ID
 export const getBeachDetails = async (req, res) => {
