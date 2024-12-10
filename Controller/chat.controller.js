@@ -1,4 +1,5 @@
-import prisma from "../Lib/Prisma.js";
+import Prisma from "../Lib/Prisma.js";
+import Prisma from "../Lib/Prisma.js";
 
 export const getChats = async (req, res) => {
   const tokenUserId = req.userId; // Assuming `req.userId` is set by a middleware (like JWT authentication)
