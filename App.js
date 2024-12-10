@@ -21,7 +21,7 @@ const app = express();
 const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
-      ? "https://alokik-bwwg-nl5ok5obp-vijayyywhos-projects.vercel.app/" // Production URL
+      ? "https://alokik-bwwg.vercel.app/" // Production URL
       : "http://localhost:5173", // Local development URL
   credentials: true, // Allow credentials
   optionsSuccessStatus: 200, // For legacy browsers
