@@ -10,7 +10,7 @@ const server = http.createServer(app);
 // Setup socket.io
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONTEND_URL || "http://localhost:5173", // Use the correct frontend URL for production or localhost for dev
+    origin: process.env.FRONTEND_URL || "https://alokik-bwwg.vercel.app/", // Use the correct frontend URL for production or localhost for dev
   },
 });
 
