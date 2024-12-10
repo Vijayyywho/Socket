@@ -2,7 +2,7 @@ import express from "express";
 import {
   getTempleDetails,
   getAllTemples,
-} from "../Controllers/temple.controller.js";
+} from "../Controller/temple.controller.js";
 
 const router = express.Router();
 

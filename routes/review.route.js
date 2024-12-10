@@ -7,7 +7,7 @@ import {
   addReview,
   deleteReview,
   getReviews,
-} from "../Controllers/review.controller.js"; // Ensure this is the correct path, with lowercase 'controllers'
+} from "../Controller/review.controller.js"; // Ensure this is the correct path, with lowercase 'controllers'
 
 // Review routes
 router.get("/:postId", getReviews); // Get all reviews for a specific post

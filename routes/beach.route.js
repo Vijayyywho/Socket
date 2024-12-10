@@ -2,7 +2,7 @@ import express from "express";
 import {
   getBeachDetails,
   getAllBeaches,
-} from "../Controllers/beach.controller.js";
+} from "../Controller/beach.controller.js";
 
 const router = express.Router();
 
