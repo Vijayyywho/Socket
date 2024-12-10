@@ -8,10 +8,14 @@ const app = express();
 const server = http.createServer(app);
 
 // Setup socket.io
-const io = new Server({
+const io = new Server(server, {
   cors: {
-    origin: ["https://alokik-bwwg.vercel.app", "http://localhost:5173"], // Frontend URLs for production and development
+    origin: [
+      "https://alokik-bwwg.vercel.app", // Production frontend URL
+      "http://localhost:5173", // Development frontend URL (adjust if needed)
+    ],
     methods: ["GET", "POST"],
+    credentials: true, // Ensure credentials are allowed if needed
   },
 });
 
@@ -55,7 +59,7 @@ io.on("connection", (socket) => {
     console.log("Message Sent!");
     const receiver = getUser(receiverId);
     if (receiver) {
-      console.log("Connection successful!");
+      console.log("Receiver found, sending message!");
       io.to(receiver.socketId).emit("getMessage", data);
     } else {
       console.log("User is offline");
@@ -70,7 +74,7 @@ io.on("connection", (socket) => {
   });
 });
 
-// Use dynamic port for cloud hosting
+// Use dynamic port for cloud hosting or fallback to 10000 for local development
 const PORT = process.env.PORT || 10000;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
