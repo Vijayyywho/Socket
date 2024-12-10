@@ -8,9 +8,10 @@ const app = express();
 const server = http.createServer(app);
 
 // Setup socket.io
-const io = new Server(server, {
+const io = new Server({
   cors: {
-    origin: process.env.FRONTEND_URL || "https://alokik-bwwg.vercel.app/", // Use the correct frontend URL for production or localhost for dev
+    origin: ["https://alokik-bwwg.vercel.app", "http://localhost:5173"], // Frontend URLs for production and development
+    methods: ["GET", "POST"],
   },
 });
 
@@ -70,7 +71,7 @@ io.on("connection", (socket) => {
 });
 
 // Use dynamic port for cloud hosting
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 10000;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
