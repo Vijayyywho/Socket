@@ -11,7 +11,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: [
-      "https://alokikkkl.netlify.app/", // Production frontend URL
+      "https://alokikpalghar.com/", // Production frontend URL
       "http://localhost:5173", // Development frontend URL (adjust if needed)
     ],
     methods: ["GET", "POST"],
